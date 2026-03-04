@@ -1,0 +1,17 @@
+In one normal gameplay loop of Wordle, what is the bottleneck 
+(the method in your implementation that takes the longest to run)? 
+What is its run time, and as a function of what? (For example, if you say 
+O(n), what is n?)
+
+The big bottleneck is checking whether our word is in the list of 
+valid words. For each input, this requires us to iterate over the 
+entire list of valid words to compare our input, which takes up to 
+O(n) time where n is the number of words in the list of valid words.
+
+Can you think of any ways to speed it up? 
+Describe a brief sketch of what your code 
+could do to remove this bottleneck.
+
+Use a set-like data structure (that is hashed), kind of like set() 
+in Python. This would ensure O(1) time to check whether our input is
+valid word, regardless of how big the list of valid words is.

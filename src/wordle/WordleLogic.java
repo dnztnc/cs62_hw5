@@ -93,7 +93,7 @@ public class WordleLogic {
     }
 
     private void saveStats() {
-        try (PrintWriter out = new PrintWriter("wordle_stats.txt")) {
+        try (PrintWriter out = new PrintWriter("cs62_hw5/wordle_stats.txt")) {
             for (int i = 0; i < 6; i++) {
                 out.println(guessStats[i]);
             }
@@ -102,7 +102,7 @@ public class WordleLogic {
         }
     }
     private void loadStats() {
-        try (Scanner in = new Scanner(new File("wordle_stats.txt"))) {
+        try (Scanner in = new Scanner(new File("cs62_hw5/wordle_stats.txt"))) {
             for (int i = 0; i < 6; i++) {
                 guessStats[i] = in.nextInt();
             }
